@@ -1,0 +1,7 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!-- This brush is be used via dynamic resource binding for control in Library -->
+    <SolidColorBrush x:Key="SolidColorBrushExample" Color="Orange" />
+
+</ResourceDictionary>

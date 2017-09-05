@@ -1,0 +1,19 @@
+#Folders
+obj/
+bin/
+packages/
+
+#OS Junk
+Thumbs.db
+.DS_Store*
+ehthumbs.db
+Icon7
+
+*.pdb
+
+*.suo
+*.user
+.vs
+*.tmp_proj
+
+*.backup
