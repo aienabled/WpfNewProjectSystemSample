@@ -15,7 +15,7 @@
        This is a simple workaround for issue with ReSharper when it reports 
        "Field is already used" because including intermediate files into it's project model.
        Unfortunately $(IntermediateOutputPath) doesn't work here.
-       If your'e not using ReSharper you can safely remove this section
+       If you're not using ReSharper you can safely remove this section.
   -->
   <ItemGroup>
     <Compile Remove="obj\**" />

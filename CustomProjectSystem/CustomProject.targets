@@ -46,14 +46,9 @@
   </PropertyGroup>  
   
   <!-- Items include -->
-  <ItemGroup> 
-    <!-- Uncomment to cleanup all includes if needed -->
-    <!-- <None Remove="**\*.*" /> -->
-    <!-- <Content Remove="**\*.*" /> -->
-    <!-- <Page Remove="**\*.*" /> -->
-    <!-- <Compile Remove="**\*.*" /> -->       
-    
-    <Compile Include="**\*.cs" />
+  <ItemGroup>     
+  
+    <Compile Include="**\*.cs" Exclude="$(BaseIntermediateOutputPath)\**" />
     
     <Page Include="**\*.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -61,5 +56,15 @@
     </Page>    
   
   </ItemGroup>  
+  
+  <!--
+     Workaround to fix Intellisense file generation for XAML projects
+     https://github.com/dotnet/project-system/issues/2488
+  -->
+  <Target Name="WorkaroundForXAMLIntellisenseBuildIssue" AfterTargets="_CheckCompileDesignTimePrerequisite">
+    <PropertyGroup>
+      <BuildingProject>false</BuildingProject>
+    </PropertyGroup>
+  </Target>
 
 </Project>
