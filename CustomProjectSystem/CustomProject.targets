@@ -9,15 +9,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PropertyPageSchema Include="$(MSBuildThisFileDirectory)Rules\general.propertiesWindow.xaml;$(MSBuildThisFileDirectory)Rules\CustomPropertyPage.xaml;">
-			<Context>Project</Context>
-		</PropertyPageSchema>
-
 		<PropertyPageSchema Include="$(MSBuildThisFileDirectory)Rules\ProjectItemsSchema.xaml;" />	
-
-		<PropertyPageSchema Include="$(MSBuildThisFileDirectory)Rules\general.browseobject.xaml">
-			<Context>BrowseObject</Context>
-		</PropertyPageSchema>
 
 		<PropertyPageSchema Include="$(MSBuildThisFileDirectory)Rules\Page.xaml;">
 			<Context>File;BrowseObject</Context>
@@ -48,7 +40,7 @@
   <!-- Items include -->
   <ItemGroup>     
   
-    <Compile Include="**\*.cs" Exclude="$(BaseIntermediateOutputPath)\**" />
+    <Compile Remove="$(BaseIntermediateOutputPath)\**" />
     
     <Page Include="**\*.xaml">
       <Generator>MSBuild:Compile</Generator>

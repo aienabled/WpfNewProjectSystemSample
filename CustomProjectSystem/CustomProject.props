@@ -4,8 +4,9 @@
 
 	<PropertyGroup>		
 		<TargetFramework>net462</TargetFramework>
-		<EnableDefaultItems>false</EnableDefaultItems>
-		<EnableDefaultCompileItems>false</EnableDefaultCompileItems>		
+        <!-- you can disable these two properties if you don't want to use default VS behavior for adding your files -->
+		<EnableDefaultItems>true</EnableDefaultItems>
+		<EnableDefaultCompileItems>true</EnableDefaultCompileItems>
 	</PropertyGroup>
 		
 	<Import Project="$(MSBuildThisFileDirectory)\CustomProject.targets" />
