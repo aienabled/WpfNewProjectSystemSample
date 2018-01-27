@@ -9,6 +9,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+        <!-- This is a workaround for issue described in https://github.com/Microsoft/VSProjectSystem/issues/261
+             I'm very not sure about this hack but so far it works properly to us -->
+        <PropertyPageSchema Include="$(ManagedXamlResourcesDirectory)ProjectItemsSchema.xaml" />
+        
 		<PropertyPageSchema Include="$(MSBuildThisFileDirectory)Rules\ProjectItemsSchema.xaml;" />	
 
 		<PropertyPageSchema Include="$(MSBuildThisFileDirectory)Rules\Page.xaml;">
@@ -30,12 +34,6 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="WindowsBase" />    
   </ItemGroup>
-    
-  <!-- commented out in favor of workaround presented at https://github.com/dotnet/sdk/issues/810#issuecomment-295642279 -->
-  <!-- <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" /> -->
-  <PropertyGroup>
-    <LanguageTargets>$(MSBuildExtensionsPath)\$(VisualStudioVersion)\Bin\Microsoft.CSharp.targets</LanguageTargets>
-  </PropertyGroup>  
   
   <!-- Items include -->
   <ItemGroup>     

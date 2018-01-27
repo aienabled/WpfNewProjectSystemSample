@@ -1,7 +1,17 @@
-<Project Sdk="Microsoft.NET.Sdk">
+<Project>
 
   <PropertyGroup Label="Globals">
     <CustomProjectExtensionsPath>$(SolutionDir)\CustomProjectSystem\</CustomProjectExtensionsPath>
+    <ProjectGuid>2bd93133-4528-498e-bae8-4636bf7c4cf2</ProjectGuid>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <TargetFramework>net47</TargetFramework>
+    <OutputType>winexe</OutputType>
+    <DebugType>Full</DebugType>
+    <!--<ApplicationIcon>res\ico\icon.ico</ApplicationIcon>-->
+    <OutputTypeEx>winexe</OutputTypeEx>
+    <StartupObject>Sample.App.App</StartupObject>
   </PropertyGroup>
   
   <PropertyGroup Label="Configuration">
@@ -10,14 +20,6 @@
   </PropertyGroup>
   
   <Import Project="$(CustomProjectExtensionsPath)CustomProject.props" />
-
-  <PropertyGroup>
-    <OutputType>winexe</OutputType>
-    <DebugType>Full</DebugType>
-    <!--<ApplicationIcon>res\ico\icon.ico</ApplicationIcon>-->
-    <OutputTypeEx>winexe</OutputTypeEx>
-    <StartupObject>Sample.App.App</StartupObject>
-  </PropertyGroup>
 
   <!-- Add project reference on WpfNetStandardLibrary -->
   <ItemGroup>
@@ -28,16 +30,6 @@
     <!-- App.xaml -->
     <Page Remove="App.xaml" />
     <ApplicationDefinition Include="App.xaml" SubType="Designer" Generator="MSBuild:Compile" />
-  </ItemGroup>
-
-  <!-- 
-       This is a simple workaround for issue with ReSharper when it reports 
-       "Field is already used" because including intermediate files into it's project model.
-       Unfortunately $(IntermediateOutputPath) doesn't work here.
-       If you're not using ReSharper you can safely remove this section.
-  -->
-  <ItemGroup>
-    <Compile Remove="obj\**" />
   </ItemGroup>
 
 </Project>
