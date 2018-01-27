@@ -1,10 +1,12 @@
 # Wpf sample application for new Project System
-Sample WPF application using the [new csproj format](https://github.com/dotnet/project-system).
+This is a sample WPF application using the [new csproj format](https://github.com/dotnet/project-system).
 Targeting .NET Framework (4.6.2 or higher).
+It could be used to for porting WPF applications to new csproj format until official support is implemented.
+Please note that Microsoft is aware of the WPF porting problems and included WPF support of the new csproj format for the upcoming VS 16.0 release according the [official roadmap](https://github.com/dotnet/project-system/blob/master/docs/repo/roadmap.md).
 
 It works perfectly well with VS IntelliSense and ReSharper.
 XAML edit & continue also supported.
-Basically, it should work in the same way as regular WPF project, but based on the new Project System.
+Basically, it should work in the same way as a regular WPF project, but based on the new Project System. However, there are some issues described below.
 
 It includes following workarounds:
 * https://github.com/dotnet/sdk/issues/810#issuecomment-295642279 (LanguageTargets)
