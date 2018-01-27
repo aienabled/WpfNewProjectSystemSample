@@ -22,14 +22,15 @@
   <Import Project="$(CustomProjectExtensionsPath)CustomProject.props" />
 
   <!-- Add project reference on WpfNetStandardLibrary -->
-  <ItemGroup>
-    <ProjectReference Include="..\WpfNetStandardLibrary\WpfNetStandardLibrary.csproj" />
-  </ItemGroup>
 
   <ItemGroup>
     <!-- App.xaml -->
     <Page Remove="App.xaml" />
     <ApplicationDefinition Include="App.xaml" SubType="Designer" Generator="MSBuild:Compile" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SampleLibrary\SampleLibrary.csproj" />
   </ItemGroup>
 
 </Project>

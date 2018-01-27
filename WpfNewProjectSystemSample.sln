@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfNetStandardLibrary", "WpfNetStandardLibrary\WpfNetStandardLibrary.csproj", "{5104E866-E3EA-4351-8BD0-4806D994936B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleLibrary", "SampleLibrary\SampleLibrary.csproj", "{5104E866-E3EA-4351-8BD0-4806D994936B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfNetStandardApp", "WpfNetStandardApp\WpfNetStandardApp.csproj", "{2BD93133-4528-498E-BAE8-4636BF7C4CF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleApp", "SampleApp\SampleApp.csproj", "{2BD93133-4528-498E-BAE8-4636BF7C4CF2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
