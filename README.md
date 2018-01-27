@@ -12,3 +12,8 @@ It includes following workarounds:
 * https://github.com/dotnet/project-system/issues/2488 (VS IntelliSense)
 * https://github.com/dotnet/project-system/blob/master/src/Microsoft.VisualStudio.ProjectSystem.Managed/ProjectSystem/Rules/ (XAML Page, ApplicationDefinition, ProjectItemsSchema)
 * Some new workarounds from my own experience to resolve issues such as https://github.com/Microsoft/VSProjectSystem/issues/261.
+
+## Important issues
+Please note that this solution doesn't use two-pass XAML building routine, so if you're referencing any elements by name from code-behind it will require you to compile the solution twice (so it will generate the required `.g.cs` files in intermediate (`obj`) folder during the first compilation).
+The problem was discussed there with a known workaround (which is not incorporated into this repository yet)
+https://github.com/dotnet/project-system/issues/1467#issuecomment-360985477
