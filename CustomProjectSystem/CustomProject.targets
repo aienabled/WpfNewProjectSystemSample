@@ -45,6 +45,7 @@
       <SubType>Designer</SubType>
     </Page>    
   
+    <UpToDateCheckInput Include="**\*.xaml" />
   </ItemGroup>  
   
   <!--
