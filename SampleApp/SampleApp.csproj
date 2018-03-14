@@ -1,7 +1,7 @@
 <Project>
 
   <PropertyGroup Label="Globals">
-    <CustomProjectExtensionsPath>$(SolutionDir)\CustomProjectSystem\</CustomProjectExtensionsPath>
+    <CustomProjectExtensionsPath>$(MSBuildProjectDirectory)\..\CustomProjectSystem\</CustomProjectExtensionsPath>
     <ProjectGuid>2bd93133-4528-498e-bae8-4636bf7c4cf2</ProjectGuid>
   </PropertyGroup>
   
